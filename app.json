@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "name": "MDR Serviços",
+    "slug": "mdr-servicos-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "plugins": [
+      "expo-sqlite",
+      "expo-status-bar"
+    ]
+  }
+}
