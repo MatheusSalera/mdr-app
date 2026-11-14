@@ -19,6 +19,7 @@ const Tab = createBottomTabNavigator();
 const icones = { Inicio: 'home', Servicos: 'construct', Propostas: 'document-text', Vistoria: 'speedometer', Contato: 'call' };
 const cabecalho = { headerStyle: { backgroundColor: cores.primaria }, headerTintColor: '#fff', headerTitleStyle: { fontWeight: '700' } };
 
+
 function Abas() {
   return (
     <Tab.Navigator
