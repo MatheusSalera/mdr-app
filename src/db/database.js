@@ -2,7 +2,6 @@ import * as SQLite from 'expo-sqlite';
 
 let dbPromise = null;
 
-// Abre o banco uma única vez e cria a tabela caso ainda não exista.
 export function getDb() {
   if (!dbPromise) {
     dbPromise = (async () => {
@@ -30,7 +29,6 @@ export function getDb() {
 const agora = () => new Date().toISOString();
 const numero = (v) => (v ? parseInt(v, 10) || null : null);
 
-// CREATE: salva a proposta e gera o protocolo MDR-ANO-0001.
 export async function criarProposta(p) {
   const db = await getDb();
   const r = await db.runAsync(
@@ -43,7 +41,7 @@ export async function criarProposta(p) {
   return protocolo;
 }
 
-// READ: lista com busca por texto e filtro por status.
+
 export async function listarPropostas({ busca = '', status = 'Todas' } = {}) {
   const db = await getDb();
   let sql = 'SELECT * FROM propostas WHERE 1=1';
@@ -62,7 +60,6 @@ export async function obterProposta(id) {
   return db.getFirstAsync('SELECT * FROM propostas WHERE id = ?', [id]);
 }
 
-// UPDATE
 export async function atualizarProposta(id, p) {
   const db = await getDb();
   await db.runAsync(
@@ -71,13 +68,11 @@ export async function atualizarProposta(id, p) {
   );
 }
 
-// DELETE
 export async function removerProposta(id) {
   const db = await getDb();
   await db.runAsync('DELETE FROM propostas WHERE id = ?', [id]);
 }
 
-// Proteção contra duplicidade: mesma pessoa, condomínio e serviço com proposta ainda ativa.
 export async function existeDuplicada(p) {
   const db = await getDb();
   const r = await db.getFirstAsync(
@@ -87,7 +82,7 @@ export async function existeDuplicada(p) {
   return !!r;
 }
 
-// Totais para o painel da tela inicial.
+
 export async function contarPorStatus() {
   const db = await getDb();
   const linhas = await db.getAllAsync('SELECT status, COUNT(*) AS n FROM propostas GROUP BY status');
