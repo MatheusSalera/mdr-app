@@ -1,4 +1,4 @@
-// Textos extraídos do site institucional da MDR Serviços LTDA.
+
 export const servicos = [
   {
     id: 'portaria-presencial', nome: 'Portaria Presencial', tag: 'Popular', icone: 'people',
