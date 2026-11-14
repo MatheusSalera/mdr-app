@@ -1,6 +1,6 @@
 # MDR Serviços – App Móvel (React Native / Expo)
 
-Projeto final da disciplina **CCP150 – Desenvolvimento de Aplicativos Móveis** (FEI, Prof. Vinicius).
+Projeto final da disciplina **CCP150 – Desenvolvimento de Aplicativos Móveis**.
 
 ## 1. Visão Geral e Requisitos
 
@@ -26,4 +26,4 @@ React Native, Expo, JavaScript, React Navigation (bottom-tabs e native-stack), e
 
 
 ## 4. Uso de IA (conforme guia de ética da disciplina)
-Uma IA (Claude) foi usada para gerar a parte de telas onde nao estava funcionando, entao foram feitas revisoes basicas 
+Uma IA (Claude) foi usada para gerar a parte de telas onde nao estava funcionando, entao foram feitas revisoes basicas; falha ao íniciar o projeto no expo, ao colocar a senha pelo vscode, dava como errado, então houve necessidade do uso da IA para solucionar esse problema.
